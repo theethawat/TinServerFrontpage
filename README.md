@@ -1,3 +1,22 @@
+## Tin and TDC Server FrontPage
+
+First Program using **TypeScript** co with React to use to render static webpage for my server frontpage on Port80 and 443 at my cloud server using **Firebase Realtime Database** as a serverless database.
+Not success now. I want to tell you that "ครั้งแรกกับ TypeScript ยากชิบหายย !!!"
+
+## Project Maker
+
+- Developer: Theethawat Savastham
+- Organization: [The Duck Creator](https://www.theduckcreator.in.th)
+- Email : theethawat.s@outlook.com
+- Language : TypeScript(TS) , TypeScript on React (TSX)
+- Main Library/Framework: React
+- Tools: Firebase Realtime Database , Bulma, Fontawesome
+- Showing / Running Website : Not Now
+
+Develop with love from TS (Theethawat Savastham) Using TS (TypeScript) proundly version control on GitHub
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
