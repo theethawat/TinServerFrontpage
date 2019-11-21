@@ -1,7 +1,9 @@
 ## Tin and TDC Server FrontPage
 
+[![Build Status](https://dev.azure.com/59101101500264/5910110150/_apis/build/status/theethawat.TinServerFrontpage?branchName=master)](https://dev.azure.com/59101101500264/5910110150/_build/latest?definitionId=1&branchName=master)
+
 First Program using **TypeScript** co with React to use to render static webpage for my server frontpage on Port80 and 443 at my cloud server using **Firebase Realtime Database** as a serverless database.
-Not success now. I want to tell you that "ครั้งแรกกับ TypeScript ยากชิบหายย !!!"
+Not success now. I want to tell you that **"ครั้งแรกกับ TypeScript ยากชิบหายย !!!"**Upda
 
 ## Project Maker
 
@@ -14,8 +16,6 @@ Not success now. I want to tell you that "ครั้งแรกกับ Type
 - Showing / Running Website : Not Now
 
 Develop with love from TS (Theethawat Savastham) Using TS (TypeScript) proundly version control on GitHub
-
----
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
