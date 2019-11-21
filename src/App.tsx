@@ -1,12 +1,13 @@
 import React, { Component } from "react"
 import "bulma/css/bulma.min.css"
 
-import BasicComponent from "./BasicComponent"
-import Status from "./status"
-import IMyComponentState from "./MyComponentState"
-import BasicData from "./BasicDataFetch"
+import BasicComponent from "./ServerInfoComponent/BasicComponent"
+import Status from "./ModelInterface/status"
+import IMyComponentState from "./FrontpageInterface/MyComponentState"
+import BasicData from "./ServerInfoComponent/BasicDataFetch"
 
 class App extends Component<any, IMyComponentState> {
+  private basicDataClass: BasicData
   constructor(props: any) {
     super(props)
     var construcBasicComponent: BasicComponent = {
@@ -17,14 +18,25 @@ class App extends Component<any, IMyComponentState> {
       footerLabel: "",
       organization: ""
     }
+    this.basicDataClass = new BasicData(construcBasicComponent)
+    var basicData = this.basicDataClass.getBasicData()
     this.state = {
-      basicComponent: construcBasicComponent
+      basicComponent: basicData
     }
   }
-
+  componentDidMount() {
+    this.setState({
+      basicComponent: this.basicDataClass.getBasicData()
+    })
+  }
   render() {
-    var pageHeading: String = this.state.basicComponent.serverName
-    return <div>{pageHeading}</div>
+    var stateComponent = this.state.basicComponent
+    var heading: String = stateComponent.projectStatus
+    return (
+      <div>
+        <h1>Hi {heading}</h1>
+      </div>
+    )
   }
 }
 

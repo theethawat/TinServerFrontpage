@@ -1,4 +1,4 @@
-import Status from "./status"
+import Status from "../ModelInterface/status"
 
 interface BasicComponent {
   serverName: String

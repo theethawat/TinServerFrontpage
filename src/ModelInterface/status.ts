@@ -3,6 +3,6 @@ enum Status {
   comeSoon = "Coming Soon",
   finish = "Finished",
   fail = "Failed Project",
-  tba = "Unknwon"
+  tba = "Unknown"
 }
 export default Status

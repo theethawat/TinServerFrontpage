@@ -1,10 +1,10 @@
-import FirebaseConfig from "./FirebaseConfig"
+import FirebaseConfig from "../ModelInterface/FirebaseConfig"
 import Firebase from "firebase"
-var firebase = Firebase.initializeApp(FirebaseConfig)
-var database = firebase.database()
-import Status from "./status"
+import Status from "../ModelInterface/status"
 import BasicComponent from "./BasicComponent"
 import React, { Component } from "react"
+var firebase = Firebase.initializeApp(FirebaseConfig)
+var database = firebase.database()
 
 interface IBasicDataFetchState {
   pageBasicComponent: BasicComponent
@@ -27,6 +27,7 @@ class BasicDataFetch extends Component<any, IBasicDataFetchState> {
   }
 
   componentDidMount() {
+    console.log("Programing Coming to ComponentDidMount")
     database
       .ref("/ServerPage/TDC-Server/ServerInfo")
       .once("value")
@@ -38,7 +39,7 @@ class BasicDataFetch extends Component<any, IBasicDataFetchState> {
         var serverStart: String =
           (snapshot.val() && snapshot.val().Start) || "Anonymous"
         var serverStatus: Status =
-          (snapshot.val() && snapshot.val().Status) || "Anonymous"
+          (snapshot.val() && snapshot.val().Status) || Status.comeSoon
         var serverLabel: String =
           (snapshot.val() && snapshot.val().label) || "Anonymous"
         var serverOrganize: String =
@@ -58,10 +59,6 @@ class BasicDataFetch extends Component<any, IBasicDataFetchState> {
         })
       })
   }
-
-  // render() {
-  //   return this.state.pageBasicComponent
-  // }
 
   public getBasicData() {
     return this.state.pageBasicComponent

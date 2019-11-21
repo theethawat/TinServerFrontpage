@@ -1,4 +1,4 @@
-import BasicComponent from "./BasicComponent"
+import BasicComponent from "../ServerInfoComponent/BasicComponent"
 
 interface MycomponentState {
   basicComponent: BasicComponent
