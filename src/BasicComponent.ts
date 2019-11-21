@@ -34,7 +34,7 @@ class BasicComponent extends Component {
     let describe2 =
       "Since" +
       this.starterDate +
-      " | " +
+      " | <i className={fas fa-user-friends}></i> " +
       this.organization +
       " | <span className={tag is-primary} " +
       this.projectStatus.toString +
