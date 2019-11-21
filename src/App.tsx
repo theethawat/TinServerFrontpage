@@ -12,9 +12,17 @@ var database = firebase.database()
 class App extends Component<any, IMyComponentState> {
   constructor(props: any) {
     super(props)
-    // this.state = {
-    //   basicComponent: null
-    // }
+    var construcBasicComponent: BasicComponent = {
+      serverName: "",
+      description: "",
+      starterDate: "",
+      projectStatus: Status.tba,
+      footerLabel: "",
+      organization: ""
+    }
+    this.state = {
+      basicComponent: construcBasicComponent
+    }
   }
 
   componentDidMount() {
