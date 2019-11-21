@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit&display=swap');
+
+.acenter{
+    text-align: center;
+}
+.piccenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.kanit{
+    font-family: "kanit",sans-serif;
+}
