@@ -5,7 +5,7 @@ interface BasicComponent {
   description: String
   starterDate: String
   projectStatus: Status
-  footerlabel: String
+  footerLabel: String
   organization: String
 }
 

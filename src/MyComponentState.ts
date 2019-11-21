@@ -1,5 +1,6 @@
+import BasicComponent from "./BasicComponent"
+
 interface MycomponentState {
-  header: any
-  footer: any
+  basicComponent: BasicComponent
 }
 export default MycomponentState

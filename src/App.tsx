@@ -5,7 +5,6 @@ import Firebase from "firebase"
 import BasicComponent from "./BasicComponent"
 import Status from "./status"
 import IMyComponentState from "./MyComponentState"
-import IMyComponentProp from "./MyComponentProp"
 
 var firebase = Firebase.initializeApp(FirebaseConfig)
 var database = firebase.database()
@@ -13,10 +12,9 @@ var database = firebase.database()
 class App extends Component<any, IMyComponentState> {
   constructor(props: any) {
     super(props)
-    this.state = {
-      header: "",
-      footer: ""
-    }
+    // this.state = {
+    //   basicComponent: null
+    // }
   }
 
   componentDidMount() {
@@ -37,36 +35,24 @@ class App extends Component<any, IMyComponentState> {
         var serverOrganize: String =
           (snapshot.val() && snapshot.val().Organization) || "Anonymous"
 
-        var pageBasicComponent: BasicComponent = new BasicComponent(
-          serverName,
-          serverDescribe,
-          serverStart,
-          serverStatus,
-          serverLabel,
-          serverOrganize
-        )
-
-        var heading = pageBasicComponent.getHeader()
-        var footer = pageBasicComponent.getFooter()
+        var pageBasicComponent = {
+          serverName: serverName,
+          description: serverDescribe,
+          starterDate: serverStart,
+          projectStatus: serverStatus,
+          footerLabel: serverLabel,
+          organization: serverOrganize
+        }
 
         this.setState({
-          header: heading,
-          footer: footer
+          basicComponent: pageBasicComponent
         })
       })
   }
 
   render() {
-    var pageHeading: String = this.state.header
-    var pageFooter: String = this.state.footer
-    return (
-      <div>
-        {pageHeading}
-        <br />
-        <br />
-        {pageFooter}
-      </div>
-    )
+    var pageHeading: String = this.state.basicComponent.serverName
+    return <div>{pageHeading}</div>
   }
 }
 
