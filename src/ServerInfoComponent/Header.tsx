@@ -10,7 +10,7 @@ interface IBasicDataFetchState {
   pageBasicComponent: BasicComponent
 }
 
-class BasicDataFetch extends Component<any, IBasicDataFetchState> {
+class Header extends Component<any, IBasicDataFetchState> {
   constructor(props: any) {
     super(props)
     var construcBasicComponent: BasicComponent = {
@@ -35,7 +35,7 @@ class BasicDataFetch extends Component<any, IBasicDataFetchState> {
         var serverName: String =
           (snapshot.val() && snapshot.val().Name) || "Anonymous"
         var serverDescribe: String =
-          (snapshot.val() && snapshot.val().Describe) || "Anonymous"
+          (snapshot.val() && snapshot.val().Descibe) || "Anonymous"
         var serverStart: String =
           (snapshot.val() && snapshot.val().Start) || "Anonymous"
         var serverStatus: Status =
@@ -60,9 +60,31 @@ class BasicDataFetch extends Component<any, IBasicDataFetchState> {
       })
   }
 
-  public getBasicData() {
-    return this.state.pageBasicComponent
+  render() {
+    return (
+      <div>
+        <br />
+        <h1 className="title acenter is-3">
+          {this.state.pageBasicComponent.serverName} on TDC Server
+        </h1>
+
+        <div className="is-medium acenter">
+          <p>
+            {this.state.pageBasicComponent.description}
+            <br />
+            <b>Since </b> {this.state.pageBasicComponent.starterDate} |{" "}
+            <i className="fas fa-user-friends"></i>{" "}
+            {this.state.pageBasicComponent.organization} | {"  "}
+            <span className="tag is-primary is-uppercase">
+              {" "}
+              {this.state.pageBasicComponent.projectStatus}{" "}
+            </span>
+          </p>
+          <hr />
+        </div>
+      </div>
+    )
   }
 }
 
-export default BasicDataFetch
+export default Header

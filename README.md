@@ -3,7 +3,7 @@
 [![Build Status](https://dev.azure.com/59101101500264/5910110150/_apis/build/status/theethawat.TinServerFrontpage?branchName=master)](https://dev.azure.com/59101101500264/5910110150/_build/latest?definitionId=1&branchName=master)
 
 First Program using **TypeScript** co with React to use to render static webpage for my server frontpage on Port80 and 443 at my cloud server using **Firebase Realtime Database** as a serverless database.
-Not success now. I want to tell you that **"ครั้งแรกกับ TypeScript ยากชิบหายย !!!"**Upda
+Not success now. I want to tell you that **"ครั้งแรกกับ TypeScript ยากชิบหายย !!!"**
 
 ## Project Maker
 
