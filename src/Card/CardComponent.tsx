@@ -1,6 +1,6 @@
-import ICardConponent from "./ICardcomponent"
-import ICardState from "./ICardState"
+import ICardConponent from "./ICardComponent"
 import Status from "../ModelInterface/status"
+import ICardState from "./ICardState"
 import React, { Component } from "react"
 
 class CardComponent extends Component<any, ICardState> {

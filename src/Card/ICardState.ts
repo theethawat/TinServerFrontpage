@@ -1,4 +1,4 @@
-import ICardComponent from "./ICardcomponent"
+import ICardComponent from "./ICardComponent"
 
 interface ICardState {
   cardComponent: ICardComponent
