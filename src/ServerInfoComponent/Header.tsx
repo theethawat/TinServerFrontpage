@@ -1,10 +1,7 @@
-import FirebaseConfig from "../ModelInterface/FirebaseConfig"
-import Firebase from "firebase"
+import FirebaseDatabase from "../ModelInterface/FirebaseConfig"
 import Status from "../ModelInterface/status"
 import BasicComponent from "./BasicComponent"
 import React, { Component } from "react"
-var firebase = Firebase.initializeApp(FirebaseConfig)
-var database = firebase.database()
 
 interface IBasicDataFetchState {
   pageBasicComponent: BasicComponent
@@ -28,8 +25,7 @@ class Header extends Component<any, IBasicDataFetchState> {
 
   componentDidMount() {
     console.log("Programing Coming to ComponentDidMount")
-    database
-      .ref("/ServerPage/TDC-Server/ServerInfo")
+    FirebaseDatabase.ref("/ServerPage/TDC-Server/ServerInfo")
       .once("value")
       .then(snapshot => {
         var serverName: String =
