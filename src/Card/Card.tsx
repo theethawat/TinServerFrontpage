@@ -4,6 +4,13 @@ import CardComponent from "./CardComponent"
 import ICardComponent from "./ICardComponent"
 import Status from "../ModelInterface/status"
 class Card extends Component {
+    componentDidMount() {
+        FirebaseDatabase.ref('/ServerPage/TDC-Server/ServerProgram').on('value', snapshot => {
+            snapshot.forEach(() => {
+
+            })
+        })
+    }
     render() {
         var demoCardComponent: ICardComponent
         demoCardComponent = {
